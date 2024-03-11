@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.png">
+    <script src="https://kit.fontawesome.com/d5f125e30a.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+            <title>My form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <p>Enter your information below</p>
+        <hr>
+        
+        <form class="form" onsubmit="getDetails(); return false;">
+            <p>Name</p>
+            <div class="name">
+                <div class="firstName">
+                    <input type="text" id="firstName" required>
+                    <label for="firstName">First Name</label>
+                </div>
+                <div class="middleName">
+                    <input type="text" id="middleName">
+                    <label for="middleName">Middle Name</label>
+                </div>
+                <div class="lastName">
+                    <input type="text" id="lastName">
+                    <label for="lastName">Last Name</label>
+                </div>
+            </div>
+            <h5 id="nameError">** first name is mandatory</h5>
+            <div class="details">
+                <div class="birth">
+                    <p>Birth Date</p>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="gender">
+                    <p>Gender</p>
+                    <div class="gen">
+                        <div class="radio">
+                            <input type="radio" name="gender" id="male" required>
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="gender" id="female">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <h5 id="ageError">**age should be between 10 and 90 years</h5>
+            <div class="countryPhone">
+                <div class="country">
+                    <p>Country</p>
+                    <Select name="country" id="country" required>
+                        <option value="none">Select</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="dubai">Dubai</option>
+                    </Select>
+                </div>
+                <div class="phone">
+                    <p>Phone</p>
+                    <input type="text" id="number" placeholder=" 000-000-0000">
+                </div> 
+            </div>
+            <!-- <h5 id="countryError">** Country needs to be selected</h5> -->
+            <div class="emailAndRoll">
+                <div class="email">
+                    <p>Email Address</p>
+                    <input type="text" id="email" placeholder=" myname@example.com">
+                </div>
+                <div class="rollno">
+                    <p>Roll No.</p>
+                    <input type="text" id="roll">
+                </div>
+            </div>
+            
+            <!-- <h5 id="emailError">** Please provide correct email</h5> -->
+            <div class="password">
+                <div class="pass">
+                    <p >Password</p>
+                    <input type="password" id="password">
+                </div>
+                <div class="confPass">
+                    <p >Confirm Password</p>
+                    <input type="password"  id="confirmPassword">
+                </div>
+            </div>
+            <h5 id="passwordError">** Passwords do not match</h5>
+            <h5 id="checkPassword">** Password must include symbols and characters</h5>
+            <h5 id="checkLength">** Password must be atleast 8 characters</h5>
+            <div class="languages">
+                    <p>Do you speak any other languages other than English?</p>
+                    <div class="question">
+                        <div class="yes">
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="language" id="yes">
+                        </div>
+                        <div class="no">
+                            <label for="no">No</label>
+                            <input type="radio" name="language" id="no">
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <label for="answer">Please list them</label>
+                        <textarea></textarea>
+                    </div>
+            </div>
+            <div class="hobbies">
+                <p>Please mention your hobbies</p>
+                <textarea id="hobby"></textarea>
+            </div>
+            <div class="final">
+                <button type="submit" id="submit" >Register</button>
+            </div>
+            <div class="get">
+                <button id="get">Get details</button>
+            </div>
+        </form>
+    </div>
+    <!-- <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script> -->
+  <script src="/js/jquery-3.7.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
